@@ -1,0 +1,88 @@
+/**
+ * @file theme.scss
+ *   Theme rules are similar to state rules in that they describe how modules
+ *   or layouts might look. Most sites don’t require a layer of theming but it
+ *   is good to be aware of it.
+ */
+
+// Font size
+$font-base: percentage(10 / 16);  // 1rem = 10px
+
+// Breakpoints
+$break-sm: 768px;
+$break-md: 992px;
+$break-lg: 1200px;
+
+// Colors
+$base-1: #006bb7;
+$highlight-1: #1b1f31; // darker blue
+$highlight-2: #a41719; // red
+$highlight-3: #ededed; // gray
+$highlight-4: #808080; // dark gray
+$highlight-5: #4d4d4d; // darker gray  
+$highlight-6: #003d90; // dark blue
+$highlight-7: #fafafa; // light gray
+$highlight-8: #3b8ede; // light blue
+$highlight-9: #d2d3d5; // less dark gray
+$highlight-10: #ec2327; // bright red
+$highlight-11: #afccef; // lighter blue
+$highlight-12: rgba(27, 31, 49, .8);
+
+// Font stacks
+$serif: serif;
+$sans-serif: 'Open Sans', sans-serif;
+
+// Social Media colors
+$twitter: #5ed0ff;
+$facebook: #4974cf;
+$youtube: #e44b3c;
+$rss: #ff9707;
+
+@import 'mixins';
+@import 'base';
+@import 'component';
+@import 'layout';
+@import 'modifiers';
+
+@font-face {
+  font-family: 'icons';
+  src:url('fonts/icomoon.eot?q0x25');
+  src:url('fonts/icomoon.eot?#iefixq0x25') format('embedded-opentype'),
+    url('fonts/icomoon.woff?q0x25') format('woff'),
+    url('fonts/icomoon.ttf?q0x25') format('truetype'),
+    url('fonts/icomoon.svg?q0x25#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('fonts/MonoSocialIconsFont-1.10.svg#fonts/MonoSocialIconsFont') format('svg');
+    src: url('fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
