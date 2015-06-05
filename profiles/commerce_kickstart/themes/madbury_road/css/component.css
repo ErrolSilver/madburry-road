@@ -1,0 +1,50 @@
+/**
+ * @file component.scss
+ *   The reusable, modular parts of the design. They are the callouts, the
+ *   sidebar sections, the product lists and so on.
+ */
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon/icomoon.eot?-ltpp1z");
+  src: url("fonts/icomoon/icomoon.eot?#iefix-ltpp1z") format("embedded-opentype"), url("fonts/icomoon/icomoon.woff?-ltpp1z") format("woff"), url("fonts/icomoon/icomoon.ttf?-ltpp1z") format("truetype"), url("fonts/icomoon/icomoon.svg?-ltpp1z#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/**
+ * Columns
+ */
+header .container {
+  position: relative; }
+
+.logo {
+  left: 0;
+  margin: 0 auto;
+  max-width: 300px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 100%; }
+
+.navigation--primary {
+  padding-top: 30px; }
+  .navigation--primary .nav li {
+    display: inline-block; }
+    .navigation--primary .nav li a {
+      margin-bottom: 1em;
+      position: relative; }
+      .navigation--primary .nav li a:after {
+        bottom: -65px;
+        content: '\e617';
+        display: block;
+        font-family: 'icomoon';
+        font-size: 5em;
+        left: 0;
+        margin: 0 auto;
+        overflow: hidden;
+        position: absolute;
+        right: 0; }
+  .navigation--primary__left {
+    float: left; }
+  .navigation--primary__right {
+    float: right; }
+
+/*# sourceMappingURL=component.css.map */

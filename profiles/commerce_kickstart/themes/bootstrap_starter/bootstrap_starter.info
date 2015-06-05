@@ -1,0 +1,39 @@
+name = Bootstrap Starter
+description = A Bootstrap Starter Theme.
+core = 7.x
+base theme = bootstrap_ignitor
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[header]         = 'Top Bar'
+regions[offcanvas]      = 'Off Canvas'
+regions[navigation]     = 'Navigation'
+regions[breadcrumb]     = 'Breadcrumb'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer_top]     = 'Footer Top'
+regions[footer_bottom]  = 'Footer Bottom'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/theme.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'js/plugins/respond.min.js'
+scripts[] = 'js/plugins/modernizr.custom.js'
+scripts[] = 'js/plugins/jquery.touchSwipe.min.js'
+

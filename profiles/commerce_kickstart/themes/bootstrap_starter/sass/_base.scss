@@ -1,0 +1,87 @@
+/**
+ * @file base.scss
+ *   Defaults. They are almost exclusively single element selectors but it
+ *   could include attribute selectors, pseudo-class selectors, helper classes,
+ *   child selectors or sibling selectors. Essentially, a base style says that
+ *   wherever this element is on the page, it should look like this.
+ */
+
+html, 
+body {
+  height: 100%;
+}
+
+html {
+  font-size: $font-base;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+
+  @media (max-width: 1199px) {
+    // md screens; 1rem = 9px
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 991px) {
+    // sm screens; 1rem = 8px
+    font-size: 50%;
+  }
+
+  @media (max-width: 767px) {
+    // xs screens; 1rem = 7px
+    font-size: 43.75%;
+  }
+}
+
+body {
+  font-family: $sans-serif;
+  font-size: 1.8em;
+  font-weight: 300;
+}
+ 
+h1,
+.h1 {
+  font-size: 3.6rem;
+  font-weight: 800;
+}
+
+h2,
+.h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1 px;
+  line-height: 1.4;
+}
+
+h3,
+.h3 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+h4,
+.h4 {
+  font-size: 2.4rem;
+}
+
+h5,
+.h5 {
+  font-size: 2rem;
+}
+
+h6,
+.h6 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.view {
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
