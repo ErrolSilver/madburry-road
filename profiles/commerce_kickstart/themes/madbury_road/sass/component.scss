@@ -8,6 +8,12 @@
 @import "mixins";
 
 header {
+
+  .top-bar {
+    background: $highlight-2;
+    height: 50px;
+  }
+
   .container {
     position: relative;
   }
@@ -32,11 +38,15 @@ header {
       display: inline-block;
 
       a {
+        font-weight: bold;
         margin-bottom: 1em;
+        min-height: 55px;
+        overflow: hidden;
         position: relative;
+        text-transform: uppercase;
 
         &:after {
-          bottom: -65px;
+          bottom: -60px;
           content: '\e617';
           display: block;
           font-family: 'icomoon';
@@ -58,4 +68,62 @@ header {
   &__right {
     float: right;
   }
+}
+
+.jumbotron {
+  background: none;
+  padding: 0;
+
+  &__banner {
+    background-size: cover;
+    display: table;
+    min-height: 33vw;
+    position: relative;
+    width: 100%;
+
+    .content {
+      display: table-cell;
+      height: 45vw;
+      vertical-align: bottom;
+      width: 100%;
+
+      .field-name-field-tagline {
+        background: $base-transparent;
+        color: #fff;
+        font-weight: bold;
+        padding: 3vw;
+        text-align: center;
+        text-transform: uppercase;
+
+        .field-item {
+          display: block;
+          font-size: 8rem;
+          line-height: 1;
+          margin: 0 auto;
+          max-width: 900px;
+          width: 100%;
+        }
+      }
+
+      .field-name-field-call-to-actio,
+      .field-name-field-call-to-action {
+        bottom: -25px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.footer--top {
+  background: $highlight-4;
+}
+
+.footer {
+  background: $highlight-2;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }

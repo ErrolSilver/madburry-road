@@ -12,6 +12,9 @@
 /**
  * Columns
  */
+header .top-bar {
+  background: #e2ded0;
+  height: 50px; }
 header .container {
   position: relative; }
 
@@ -29,10 +32,14 @@ header .container {
   .navigation--primary .nav li {
     display: inline-block; }
     .navigation--primary .nav li a {
+      font-weight: bold;
       margin-bottom: 1em;
-      position: relative; }
+      min-height: 55px;
+      overflow: hidden;
+      position: relative;
+      text-transform: uppercase; }
       .navigation--primary .nav li a:after {
-        bottom: -65px;
+        bottom: -60px;
         content: '\e617';
         display: block;
         font-family: 'icomoon';
@@ -46,5 +53,50 @@ header .container {
     float: left; }
   .navigation--primary__right {
     float: right; }
+
+.jumbotron {
+  background: none;
+  padding: 0; }
+  .jumbotron__banner {
+    background-size: cover;
+    display: table;
+    min-height: 33vw;
+    position: relative;
+    width: 100%; }
+    .jumbotron__banner .content {
+      display: table-cell;
+      height: 45vw;
+      vertical-align: bottom;
+      width: 100%; }
+      .jumbotron__banner .content .field-name-field-tagline {
+        background: rgba(46, 72, 120, 0.8);
+        color: #fff;
+        font-weight: bold;
+        padding: 3vw;
+        text-align: center;
+        text-transform: uppercase; }
+        .jumbotron__banner .content .field-name-field-tagline .field-item {
+          display: block;
+          font-size: 8rem;
+          line-height: 1;
+          margin: 0 auto;
+          max-width: 900px;
+          width: 100%; }
+      .jumbotron__banner .content .field-name-field-call-to-actio,
+      .jumbotron__banner .content .field-name-field-call-to-action {
+        bottom: -25px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center; }
+
+.footer--top {
+  background: #574b43; }
+
+.footer {
+  background: #e2ded0;
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
 /*# sourceMappingURL=component.css.map */

@@ -2,13 +2,14 @@
 $font-base: percentage(10 / 16);  // 1rem = 10px
 
 // Colors
-$base-1: #02203f;
-$highlight-1: #1183f8;
-$highlight-2: #b3ce00;
-$highlight-3: #1c6cbe;
-$gray-1: #333;
-$gray-dark: #333;
-$gray-light: #a2a2a2;
+$base: #2e4878;
+$base-transparent: rgba(46, 72, 120, .8);
+$highlight-1: #85a739; //green
+$highlight-2: #e2ded0; //top bar beige
+$highlight-3: #b5ae99; //dark beige?
+$highlight-4: #574b43; // brown
+$highlight-5: #254a7a; //blue (links)
+$highlight-6: #4d5963; // text
 
 // Font stacks
 $serif: serif;
