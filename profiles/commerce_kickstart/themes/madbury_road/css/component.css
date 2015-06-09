@@ -99,4 +99,9 @@ header .container {
   margin: 0;
   padding: 0; }
 
+.commerce-product-field-field-images {
+  float: left;
+  max-width: 650px;
+  width: 100%; }
+
 /*# sourceMappingURL=component.css.map */
