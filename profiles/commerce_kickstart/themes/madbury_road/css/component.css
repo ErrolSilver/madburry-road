@@ -14,7 +14,8 @@
  */
 header .top-bar {
   background: #e2ded0;
-  height: 50px; }
+  height: 50px;
+  margin-bottom: 150px; }
 header .container {
   position: relative; }
 
@@ -24,8 +25,39 @@ header .container {
   max-width: 300px;
   position: absolute;
   right: 0;
-  top: 10px;
-  width: 100%; }
+  top: 25px;
+  width: 100%;
+  -webkit-transition: max-width ease-in-out .3s;
+  transition: max-width ease-in-out .3s; }
+
+.primary--navigation {
+  overflow: hidden;
+  padding: 20px 0;
+  -webkit-transition: padding ease-in-out .3s;
+  transition: padding ease-in-out .3s; }
+
+.primary--header {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: border-bottom ease-in-out .3s;
+  transition: border-bottom ease-in-out .3s;
+  z-index: 10; }
+
+.header--affix {
+  background: #fff;
+  border-bottom: 2px solid #e2ded0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; }
+  .header--affix .primary--navigation {
+    padding: 0; }
+  .header--affix .logo {
+    max-width: 220px; }
 
 .navigation--primary {
   padding-top: 30px; }
@@ -38,9 +70,10 @@ header .container {
       overflow: hidden;
       position: relative;
       text-transform: uppercase; }
-      .navigation--primary .nav li a:after {
+      .navigation--primary .nav li a:after, .navigation--primary .nav li a:focus, .navigation--primary .nav li a:active {
         bottom: -60px;
         content: '\e617';
+        color: #e2ded0;
         display: block;
         font-family: 'icomoon';
         font-size: 5em;
@@ -49,6 +82,9 @@ header .container {
         overflow: hidden;
         position: absolute;
         right: 0; }
+      .navigation--primary .nav li a:hover {
+        background: none;
+        color: #0091cf; }
   .navigation--primary__left {
     float: left; }
   .navigation--primary__right {
@@ -91,7 +127,11 @@ header .container {
         text-align: center; }
 
 .footer--top {
-  background: #574b43; }
+  background: #574b43;
+  height: 70px;
+  overflow: hidden; }
+  .footer--top * {
+    height: inherit; }
 
 .footer {
   background: #e2ded0;
@@ -103,5 +143,27 @@ header .container {
   float: left;
   max-width: 650px;
   width: 100%; }
+
+.social-media-share {
+  text-align: center; }
+  .social-media-share .menu li {
+    color: #fff;
+    display: inline-block;
+    width: 60px; }
+    .social-media-share .menu li a {
+      color: inherit;
+      padding: 0;
+      visibility: hidden; }
+      .social-media-share .menu li a span {
+        display: block;
+        font-size: 110px;
+        left: -25px;
+        padding: 0;
+        position: relative;
+        position: relative;
+        top: -20px;
+        visibility: visible; }
+      .social-media-share .menu li a:hover {
+        opacity: .5; }
 
 /*# sourceMappingURL=component.css.map */

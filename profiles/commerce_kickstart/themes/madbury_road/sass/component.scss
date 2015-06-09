@@ -12,6 +12,7 @@ header {
   .top-bar {
     background: $highlight-2;
     height: 50px;
+    margin-bottom: 150px;
   }
 
   .container {
@@ -25,8 +26,46 @@ header {
   max-width: 300px;
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 25px;
   width: 100%;
+  -webkit-transition: max-width ease-in-out .3s;
+  transition: max-width ease-in-out .3s;
+}
+
+.primary--navigation {
+  overflow: hidden;
+  padding: 20px 0;
+  -webkit-transition: padding ease-in-out .3s;
+  transition: padding ease-in-out .3s;
+}
+
+.primary--header {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: border-bottom ease-in-out .3s;
+  transition: border-bottom ease-in-out .3s;
+  z-index: 10;
+}
+
+.header--affix {
+  background: #fff;
+  border-bottom: 2px solid $highlight-2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  .primary--navigation {
+    padding: 0;
+  }
+
+  .logo {
+    max-width: 220px;
+  }
 }
 
 .navigation--primary {
@@ -45,9 +84,12 @@ header {
         position: relative;
         text-transform: uppercase;
 
-        &:after {
+        &:after,
+        &:focus,
+        &:active {
           bottom: -60px;
           content: '\e617';
+          color: $highlight-2;
           display: block;
           font-family: 'icomoon';
           font-size: 5em;
@@ -56,6 +98,11 @@ header {
           overflow: hidden;
           position: absolute;
           right: 0;
+        }
+
+        &:hover {
+          background: none;
+          color: $highlight-7;
         }
       }
     }
@@ -119,6 +166,12 @@ header {
 
 .footer--top {
   background: $highlight-4;
+  height: 70px;
+  overflow: hidden;
+
+  * {
+    height: inherit;
+  }
 }
 
 .footer {
@@ -132,4 +185,35 @@ header {
   float: left;
   max-width: 650px;
   width: 100%;
+}
+
+.social-media-share {
+  text-align: center;
+
+  .menu li {
+    color: #fff;
+    display: inline-block;
+    width: 60px;
+
+    a {
+      color: inherit;
+      padding: 0;
+      visibility: hidden;
+
+      span {
+        display: block;
+        font-size: 110px;
+        left: -25px;
+        padding: 0;
+        position: relative;
+        position: relative;
+        top: -20px;
+        visibility: visible;
+      }
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
 }

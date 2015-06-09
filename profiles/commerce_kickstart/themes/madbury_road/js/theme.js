@@ -30,5 +30,19 @@
     }
   };
 
+  var headerOffset = $('#primaryHeader').offset().top;
+
+  $(window).scroll(function(e) {
+     var scrolled = $(window).scrollTop();
+
+     if(headerOffset <= scrolled) {
+      $('#primaryHeader').addClass('header--affix');
+      $('.top-bar').addClass('padding-bottom');
+     } else {
+      $('#primaryHeader').removeClass('header--affix');
+      $('.top-bar').removeClass('padding-bottom');
+     }
+  });
+
 }(jQuery));
 

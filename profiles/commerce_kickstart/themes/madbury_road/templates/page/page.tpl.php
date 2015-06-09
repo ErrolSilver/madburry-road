@@ -82,16 +82,18 @@
     </div>
   </div>
 
-  <div class="container text-center">
-    <div class="logo">
-      <?php print l($svg_logo, '<front>', array('html' => TRUE)); ?>
-    </div> <!-- /logo -->
-    
-    <nav class="primary--navigation">
-      <?php if (!empty($page['navigation'])): ?>
-        <?php print render($page['navigation']); ?>
-      <?php endif; ?>
-    </nav> <!-- primary navigation -->
+  <div id="primaryHeader" class="primary--header">
+    <div class="container text-center">
+      <div class="logo">
+        <?php print l($svg_logo, '<front>', array('html' => TRUE)); ?>
+      </div> <!-- /logo -->
+      
+      <nav class="primary--navigation">
+        <?php if (!empty($page['navigation'])): ?>
+          <?php print render($page['navigation']); ?>
+        <?php endif; ?>
+      </nav> <!-- primary navigation -->
+    </div>
   </div>
 </header>
 
