@@ -70,7 +70,7 @@ header .container {
       overflow: hidden;
       position: relative;
       text-transform: uppercase; }
-      .navigation--primary .nav li a:after, .navigation--primary .nav li a:focus, .navigation--primary .nav li a:active {
+      .navigation--primary .nav li a:after {
         bottom: -60px;
         content: '\e617';
         color: #e2ded0;
@@ -82,7 +82,7 @@ header .container {
         overflow: hidden;
         position: absolute;
         right: 0; }
-      .navigation--primary .nav li a:hover {
+      .navigation--primary .nav li a:hover, .navigation--primary .nav li a:focus, .navigation--primary .nav li a:active {
         background: none;
         color: #0091cf; }
   .navigation--primary__left {
@@ -152,6 +152,7 @@ header .container {
     width: 60px; }
     .social-media-share .menu li a {
       color: inherit;
+      overflow: hidden;
       padding: 0;
       visibility: hidden; }
       .social-media-share .menu li a span {

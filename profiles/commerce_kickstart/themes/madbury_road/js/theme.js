@@ -44,5 +44,28 @@
      }
   });
 
+
+  function moveSlide(element, xspeed, zindex) {
+    var scrolled = $(window).scrollTop(),
+      boundryTop = element.closest('section').offset().top,
+      boundryBottom = boundryTop + element.closest('section').outerHeight(),
+      windowBottom = $(window).height(),
+      inViewport = (boundryTop - scrolled) + windowBottom;
+
+      element.css('z-index', zindex);
+
+    //if (boundryTop <= scrolled && boundryBottom > scrolled) {
+    if (boundryTop - scrolled <= windowBottom && inViewport > 0) {
+      element.css({
+        transform: 'translateY(' + ((scrolled - element.offset().top) * xspeed) + 'px) translateX(0px)',
+      });
+
+    } else {
+      element.css({
+        transform: 'translateY(0px) translateX(0px)',
+      });
+    }
+  }
+
 }(jQuery));
 

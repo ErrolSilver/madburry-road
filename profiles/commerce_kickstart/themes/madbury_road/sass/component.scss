@@ -84,9 +84,7 @@ header {
         position: relative;
         text-transform: uppercase;
 
-        &:after,
-        &:focus,
-        &:active {
+        &:after {
           bottom: -60px;
           content: '\e617';
           color: $highlight-2;
@@ -100,7 +98,9 @@ header {
           right: 0;
         }
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
           background: none;
           color: $highlight-7;
         }
@@ -197,6 +197,7 @@ header {
 
     a {
       color: inherit;
+      overflow: hidden;
       padding: 0;
       visibility: hidden;
 
