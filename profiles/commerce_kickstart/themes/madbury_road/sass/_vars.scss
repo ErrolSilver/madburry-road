@@ -13,9 +13,9 @@ $highlight-6: #4d5963; // text
 $highlight-7: #0091cf; // light blue
 
 // Font stacks
-$serif: serif;
-$sans-serif: sans-serif;
-$sans-serif-alt: sans-serif;
+$sans-serif: 'Montserrat', serif;
+$serif: 'Neuton', sans-serif;
+$serif-alt: 'Merriweather', serif;
 
 // Column Widths - useful for padding
 $col-1: percentage(1/12);

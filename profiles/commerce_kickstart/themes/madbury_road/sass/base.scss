@@ -25,27 +25,37 @@ html {
   }
 }
 body {
-  font-family: $sans-serif;
+  font-family: $serif-alt;
   font-size: 1.8em;
   font-weight: 300;
 }
 
+%fonts {
+  font-family: $sans-serif;
+}
+
 h1 {
+  @extend %fonts;
   font-size: 3.6rem;
 }
 h2 {
+  @extend %fonts;
   font-size: 3.2rem;
 }
 h3 {
+  @extend %fonts;
   font-size: 3rem;
 }
 h4 {
+  @extend %fonts;
   font-size: 2.4rem;
 }
 h5 {
+  @extend %fonts;
   font-size: 2rem;
 }
 h6 {
+  @extend %fonts;
   font-size: 1.8rem;
 }
 
@@ -63,4 +73,8 @@ p {
 img {
   height: auto;
   max-width: 100%;
+}
+
+.nav {
+  font-family: $sans-serif;
 }

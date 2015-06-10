@@ -137,6 +137,7 @@ header {
       .field-name-field-tagline {
         background: $base-transparent;
         color: #fff;
+        font-family: $sans-serif;
         font-weight: bold;
         padding: 3vw;
         text-align: center;
@@ -217,4 +218,8 @@ header {
       }
     }
   }
+}
+
+.form--contact {
+
 }

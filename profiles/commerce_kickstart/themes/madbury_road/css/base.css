@@ -27,9 +27,12 @@ html {
       font-size: 43.75%; } }
 
 body {
-  font-family: sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 1.8em;
   font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", serif; }
 
 h1 {
   font-size: 3.6rem; }
@@ -61,5 +64,8 @@ p {
 img {
   height: auto;
   max-width: 100%; }
+
+.nav {
+  font-family: "Montserrat", serif; }
 
 /*# sourceMappingURL=base.css.map */

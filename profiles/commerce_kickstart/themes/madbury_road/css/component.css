@@ -107,6 +107,7 @@ header .container {
       .jumbotron__banner .content .field-name-field-tagline {
         background: rgba(46, 72, 120, 0.8);
         color: #fff;
+        font-family: "Montserrat", serif;
         font-weight: bold;
         padding: 3vw;
         text-align: center;
