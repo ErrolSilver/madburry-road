@@ -109,7 +109,7 @@ header .container {
         color: #fff;
         font-family: "Montserrat", serif;
         font-weight: bold;
-        padding: 3vw;
+        padding: 3vw 4vw 4vw;
         text-align: center;
         text-transform: uppercase; }
         .jumbotron__banner .content .field-name-field-tagline .field-item {
@@ -121,11 +121,18 @@ header .container {
           width: 100%; }
       .jumbotron__banner .content .field-name-field-call-to-actio,
       .jumbotron__banner .content .field-name-field-call-to-action {
-        bottom: -25px;
+        bottom: -10px;
         left: 0;
         position: absolute;
         right: 0;
         text-align: center; }
+        .jumbotron__banner .content .field-name-field-call-to-actio a,
+        .jumbotron__banner .content .field-name-field-call-to-action a {
+          background: #85a739;
+          color: #fff;
+          border-radius: 5px;
+          border: 2px solid #254a7a;
+          padding: 20px 30px; }
 
 .footer--top {
   background: #574b43;
@@ -151,7 +158,8 @@ header .container {
       .footer .nav li:first-child a {
         color: inherit; }
   .footer .region-footer {
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    overflow: hidden; }
   .footer .section--date {
     border-top: 1px solid #574b43;
     padding: 50px 0 40px; }

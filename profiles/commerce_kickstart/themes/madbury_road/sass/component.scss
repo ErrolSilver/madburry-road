@@ -139,7 +139,7 @@ header {
         color: #fff;
         font-family: $sans-serif;
         font-weight: bold;
-        padding: 3vw;
+        padding: 3vw 4vw 4vw;
         text-align: center;
         text-transform: uppercase;
 
@@ -155,11 +155,19 @@ header {
 
       .field-name-field-call-to-actio,
       .field-name-field-call-to-action {
-        bottom: -25px;
+        bottom: -10px;
         left: 0;
         position: absolute;
         right: 0;
         text-align: center;
+
+        a {
+          background: $highlight-8;
+          color: #fff;
+          border-radius: 5px;
+          border: 2px solid $highlight-5;
+          padding: 20px 30px;
+        }
       }
     }
   }
@@ -200,6 +208,7 @@ header {
 
   .region-footer {
     margin-bottom: 1.5em;
+    overflow: hidden;
   }
 
   .section--date {

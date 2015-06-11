@@ -70,4 +70,8 @@ img {
 .nav {
   font-family: "Montserrat", serif; }
 
+p,
+.field {
+  line-height: 1.8; }
+
 /*# sourceMappingURL=base.css.map */
