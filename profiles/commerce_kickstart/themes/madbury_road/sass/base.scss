@@ -39,7 +39,8 @@ h1 {
   font-size: 3.6rem;
 }
 h2 {
-  @extend %fonts;
+  color: $highlight-3;
+  font-family: $serif;
   font-size: 3.2rem;
 }
 h3 {

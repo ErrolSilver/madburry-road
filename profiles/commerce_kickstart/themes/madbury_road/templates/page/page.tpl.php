@@ -157,5 +157,9 @@
 <div class="footer">
   <footer class="container">
     <?php print render($page['footer']); ?>
+
+    <div class="col-md-12 text-center section--date">
+      <p>Copyright © <?php echo date("Y") ?> Madbury Road, LLC</p>
+    </div>
   </footer>
 </div>
