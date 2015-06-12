@@ -28,7 +28,9 @@ header .container {
   top: 25px;
   width: 100%;
   -webkit-transition: max-width ease-in-out .3s;
-  transition: max-width ease-in-out .3s; }
+  transition: max-width ease-in-out .3s;
+  -webkit-transition: top ease-in-out .3s;
+  transition: top ease-in-out .3s; }
 
 .primary--navigation {
   overflow: hidden;
@@ -57,7 +59,8 @@ header .container {
   .header--affix .primary--navigation {
     padding: 0; }
   .header--affix .logo {
-    max-width: 220px; }
+    max-width: 220px;
+    top: 15px; }
 
 .navigation--primary {
   padding-top: 30px; }

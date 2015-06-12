@@ -139,6 +139,14 @@
       <?php print render($page['content']); ?>
     </section>
 
+    <section>
+      <?php print render($page['content_mid_full']); ?>
+    </section>
+
+    <section <?php print $content_column_class; ?>>
+      <?php print render($page['content_lower']); ?>
+    </section>
+
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_second']); ?>

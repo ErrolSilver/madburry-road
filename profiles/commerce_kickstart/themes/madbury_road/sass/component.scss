@@ -30,6 +30,8 @@ header {
   width: 100%;
   -webkit-transition: max-width ease-in-out .3s;
   transition: max-width ease-in-out .3s;
+  -webkit-transition: top ease-in-out .3s;
+  transition: top ease-in-out .3s;
 }
 
 .primary--navigation {
@@ -65,6 +67,7 @@ header {
 
   .logo {
     max-width: 220px;
+    top: 15px;
   }
 }
 
