@@ -138,11 +138,15 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
     </section>
+  </div> <!-- /row -->
+</div> <!-- /container -->
 
-    <section>
-      <?php print render($page['content_mid_full']); ?>
-    </section>
-
+<section class="col-full">
+  <?php print render($page['content_mid_full']); ?>
+</section>
+  
+<div class="container">
+  <div class="row">
     <section <?php print $content_column_class; ?>>
       <?php print render($page['content_lower']); ?>
     </section>
