@@ -11,8 +11,17 @@ header {
 
   .top-bar {
     background: $highlight-2;
-    height: 50px;
+    height: 40px;
     margin-bottom: 150px;
+    overflow: hidden;
+
+    &.open-nav {
+      margin-bottom: 300px;
+    }
+
+    .nav {
+      font-family: $serif;
+    }
   }
 
   .container {
@@ -26,22 +35,21 @@ header {
   max-width: 300px;
   position: absolute;
   right: 0;
-  top: 25px;
-  width: 100%;
-  -webkit-transition: max-width ease-in-out .3s;
-  transition: max-width ease-in-out .3s;
-  -webkit-transition: top ease-in-out .3s;
-  transition: top ease-in-out .3s;
+  top: 15px;
+  width: 300px;
+  -webkit-transition: top ease-in-out .3s, width ease-in-out .3s;
+  transition: top ease-in-out .3s, width ease-in-out .3s;
 }
 
 .primary--navigation {
   overflow: hidden;
-  padding: 20px 0;
+  padding: 10px 0;
   -webkit-transition: padding ease-in-out .3s;
   transition: padding ease-in-out .3s;
 }
 
 .primary--header {
+  background: #fff;
   position: absolute;
   top: 50px;
   left: 0;
@@ -50,6 +58,18 @@ header {
   -webkit-transition: border-bottom ease-in-out .3s;
   transition: border-bottom ease-in-out .3s;
   z-index: 10;
+
+  * {
+    overflow: visible!important;
+  }
+
+  &.open-nav {
+    height: 310px;
+  }
+}
+
+.breadcrumb {
+  background: none;
 }
 
 .header--affix {
@@ -66,29 +86,43 @@ header {
   }
 
   .logo {
-    max-width: 220px;
+    width: 220px;
     top: 15px;
   }
 }
 
 .navigation--primary {
   padding-top: 30px;
+  position: relative;
 
   .nav {
 
     li {
       display: inline-block;
+      position: static;
+      vertical-align: top;
 
-      a {
+      @media (min-width: 1200px) {
+        min-width: 215px;
+      }
+
+      a,
+      .nolink {
+        color: $highlight-5;
+        cursor: pointer;
+        font-size: 16px;
         font-weight: bold;
         margin-bottom: 1em;
         min-height: 55px;
-        overflow: hidden;
         position: relative;
         text-transform: uppercase;
 
+        @media (max-width: 1200px) {
+          padding: 10px;
+        }
+
         &:after {
-          bottom: -60px;
+          bottom: -51px;
           content: '\e617';
           color: $highlight-2;
           display: block;
@@ -106,6 +140,41 @@ header {
         &:active {
           background: none;
           color: $highlight-7;
+        }
+      }
+
+      ul {
+        height: 0;
+        overflow: hidden!important;
+        width: 0;
+
+        &.open-nav {
+          height: auto;
+          left: 0;
+          width: 1120px;
+          position: absolute;
+          width: 100%;
+
+          @media (max-width: 1200px) {
+            width: 940px;
+          }
+        }
+
+        span {
+          color: $highlight-3;
+          cursor: pointer;
+          font-size: 9em;
+          padding: 0;
+        }
+
+
+        a {
+          padding: 0 40px;
+          
+          &:after {
+            content: '';
+            display: none;
+          }
         }
       }
     }
@@ -179,6 +248,7 @@ header {
 .footer--top {
   background: $highlight-4;
   height: 70px;
+  margin-top: 5em;
   overflow: hidden;
 
   * {
@@ -195,7 +265,7 @@ header {
   padding-top: 40px;
 
   .nav {
-    font-family: $serif-alt;
+    font-family: $serif;
     font-size: 1.6rem;
 
     li:first-child {
@@ -260,4 +330,130 @@ header {
 
 .form--contact {
 
+}
+
+.view-try-us-at-home-block {
+  border: 1px solid $base;
+  height: 66vh;
+  margin: 3em 0;
+  overflow: hidden;
+  position: relative;
+
+  .view-content {
+    height: 100%;
+    margin-top: -50px;
+  }
+
+  .node {
+    height: 100%;
+  }
+
+  .views-row {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .field-name-title-field {
+    background: $base-transparent;
+    height: 50px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    top: 50px;
+  }
+
+  .field-name-body {
+    background: #fff;
+    height: 100%;
+    display: flex;
+
+    .field-items {
+      margin: auto;
+    }
+  }
+}
+
+.view-shopping-cart {
+  float: right;
+  font-size: 90%;
+
+  p {
+    float: left;
+    left: -15px;
+    margin: 0;
+    padding-right: 10px;
+    position: relative;
+    top: 5px;
+  }
+
+  .line-item-total {
+    display: none;
+  }
+
+  .line-item-summary {
+    float: right;
+    margin: 0;
+    padding-right: 5px;
+
+    a {
+      background: #b5ae99;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px 10px;
+    }
+  }
+}
+
+.top-bar {
+  .block-views {
+    float: right;
+    padding-right: 30px;
+  }
+}
+
+.top-nav--utility {
+  float: right;
+  height: 30px;
+  left: -4rem;
+  overflow: hidden;
+  position: relative;
+  top: 0.2rem;
+
+  .nav {
+    li {
+      display: inline-block;
+
+      a {
+        color: $highlight-4;
+        font-size: 2.1rem;
+        padding: 0;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: 0;
+        }
+      }
+
+      span {
+        color: $highlight-3;
+        cursor: pointer;
+        display: block;
+        float: left;
+        padding: 0;
+        position: relative;
+        text-align: right;
+        top: -3.2rem;
+        width: 6rem;
+
+        &:before {
+          font-size: 9.6rem;
+          left: -1rem;
+          position: relative;
+        }
+      }
+    }
+  }
 }

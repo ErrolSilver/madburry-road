@@ -31,6 +31,12 @@
   };
 
   var headerOffset = $('#primaryHeader').offset().top;
+  var $headLinks = $('.navigation--primary').find('.nolink');
+
+  $headLinks.click(function(event) {
+    $(this).next('ul').toggleClass('open-nav');
+    $('.primary--header').toggleClass('open-nav');
+  });
 
   $(window).scroll(function(e) {
      var scrolled = $(window).scrollTop();
