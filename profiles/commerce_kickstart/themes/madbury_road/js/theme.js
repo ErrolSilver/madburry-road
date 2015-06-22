@@ -48,6 +48,8 @@
       $('#primaryHeader').removeClass('header--affix');
       $('.top-bar').removeClass('padding-bottom');
      }
+
+     moveSlide($('.jumbotron__banner'), 0.2, 1)
   });
 
 
@@ -63,7 +65,8 @@
     //if (boundryTop <= scrolled && boundryBottom > scrolled) {
     if (boundryTop - scrolled <= windowBottom && inViewport > 0) {
       element.css({
-        transform: 'translateY(' + ((scrolled - element.offset().top) * xspeed) + 'px) translateX(0px)',
+        //transform: 'translateY(' + ((scrolled - element.offset().top) * xspeed) + 'px) translateX(0px)',
+        'background-position': '0%' + ((scrolled - element.offset().top) * xspeed) + 'px',
       });
 
     } else {

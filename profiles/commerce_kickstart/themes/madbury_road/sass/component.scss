@@ -94,7 +94,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 500;
 
   .primary--navigation {
     padding: 0;
@@ -509,5 +509,110 @@ header {
         }
       }
     }
+  }
+}
+
+.panel-default {
+  border: 0;
+  background: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+
+  @media (max-width: 992px) {
+    .commerce-product-field-field-images {
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .panel-body {
+    padding: 0;
+  }
+
+  .panel-footer {
+    background: $base-transparent;
+    border: 0;
+    bottom: 0;
+    color: #fff;
+    font-family: $sans-serif;
+    padding: 0;
+    position: absolute;
+    width: 94.8%;
+
+    h2 {
+      color: inherit;
+      font-family: inherit;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      margin: 0;
+
+      a {
+        color: inherit;
+        display: block;
+        padding: 4% 0;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      width: 94%;
+    }
+
+    @media (max-width: 992px) {
+      width: 96%;
+    }
+  }
+}
+
+.block-views {
+  .block-title.block-title.block-title {
+    margin: 25px auto 50px;
+  }
+}
+
+.fancy {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.fancy hr,
+hr.fancy {
+  border-color: $highlight-3;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  &:before {
+    color: $highlight-3;
+    content: '\e606';
+    font-family: 'icomoon';
+    font-size: 12rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -6.5rem;
+
+    @media (max-width: 992px) {
+      top: -5.5rem;
+    }
+    @media (max-width: 768px) {
+      top: -4.5rem;
+    }
+  }
+
+  &:after {
+    border: 2px solid $highlight-3;
+    content: ' ';
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 19px;
+    width: 80%;
   }
 }
