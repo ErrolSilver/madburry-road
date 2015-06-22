@@ -585,6 +585,7 @@ hr.fancy {
   border-color: $highlight-3;
   margin-left: 15px;
   margin-right: 15px;
+  position: relative;
 
   &:before {
     color: $highlight-3;
@@ -595,13 +596,13 @@ hr.fancy {
     position: absolute;
     right: 0;
     text-align: center;
-    top: -6.5rem;
+    top: -8.7rem;
 
     @media (max-width: 992px) {
-      top: -5.5rem;
+      top: -7.7rem;
     }
     @media (max-width: 768px) {
-      top: -4.5rem;
+      top: -6.8rem;
     }
   }
 
@@ -612,7 +613,7 @@ hr.fancy {
     margin: 0 auto;
     position: absolute;
     right: 0;
-    top: 19px;
+    top: -2px;
     width: 80%;
   }
 }

@@ -429,7 +429,8 @@ header .container {
 hr.fancy {
   border-color: #b5ae99;
   margin-left: 15px;
-  margin-right: 15px; }
+  margin-right: 15px;
+  position: relative; }
   .fancy hr:before,
   hr.fancy:before {
     color: #b5ae99;
@@ -440,15 +441,15 @@ hr.fancy {
     position: absolute;
     right: 0;
     text-align: center;
-    top: -6.5rem; }
+    top: -8.7rem; }
     @media (max-width: 992px) {
       .fancy hr:before,
       hr.fancy:before {
-        top: -5.5rem; } }
+        top: -7.7rem; } }
     @media (max-width: 768px) {
       .fancy hr:before,
       hr.fancy:before {
-        top: -4.5rem; } }
+        top: -6.8rem; } }
   .fancy hr:after,
   hr.fancy:after {
     border: 2px solid #b5ae99;
@@ -457,7 +458,7 @@ hr.fancy {
     margin: 0 auto;
     position: absolute;
     right: 0;
-    top: 19px;
+    top: -2px;
     width: 80%; }
 
 /*# sourceMappingURL=component.css.map */
