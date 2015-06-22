@@ -69,7 +69,8 @@ header .container {
     height: 310px; }
 
 .breadcrumb {
-  background: none; }
+  background: none;
+  text-align: left; }
 
 .header--affix {
   background: #fff;
@@ -460,5 +461,8 @@ hr.fancy {
     right: 0;
     top: -2px;
     width: 80%; }
+
+.page-node-846 .main-container {
+  text-align: center; }
 
 /*# sourceMappingURL=component.css.map */

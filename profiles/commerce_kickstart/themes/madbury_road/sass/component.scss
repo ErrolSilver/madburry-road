@@ -85,6 +85,7 @@ header {
 
 .breadcrumb {
   background: none;
+  text-align: left;
 }
 
 .header--affix {
@@ -615,5 +616,11 @@ hr.fancy {
     right: 0;
     top: -2px;
     width: 80%;
+  }
+}
+
+.page-node-846 {
+  .main-container {
+    text-align: center;
   }
 }
