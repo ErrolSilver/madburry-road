@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @file component.scss
  *   The reusable, modular parts of the design. They are the callouts, the
@@ -12,6 +13,15 @@
 /**
  * Columns
  */
+.btn--default, .form--contact button {
+  background: #85a739;
+  border-radius: 5px;
+  border: 2px solid #254a7a;
+  font-family: "Montserrat", serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 20px 30px; }
+
 header .top-bar {
   background: #e2ded0;
   height: 40px;
@@ -292,6 +302,20 @@ header .container {
       .social-media-share .menu li a:hover {
         opacity: .5; }
 
+.form--contact label {
+  font-size: 1.6rem; }
+.form--contact input {
+  height: 50px;
+  margin-bottom: 1.5em; }
+.form--contact .block-title {
+  margin-bottom: 1em;
+  text-align: center; }
+.form--contact .form-required {
+  display: none; }
+.form--contact button {
+  margin: 2em auto;
+  width: 100%; }
+
 .view-try-us-at-home-block {
   border: 1px solid #2e4878;
   height: 66vh;
@@ -379,11 +403,12 @@ header .container {
         position: relative; }
 
 .panel-default {
-  border: 0;
   background: none;
+  border: 0;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  min-height: 290px;
   position: relative; }
   @media (max-width: 992px) {
     .panel-default .commerce-product-field-field-images {
@@ -420,7 +445,7 @@ header .container {
         width: 96%; } }
 
 .block-views .block-title.block-title.block-title {
-  margin: 25px auto 50px; }
+  margin: 25px auto 25px; }
 
 .fancy {
   margin-top: 30px;
@@ -464,5 +489,61 @@ hr.fancy {
 
 .page-node-846 .main-container {
   text-align: center; }
+
+.view-header a {
+  font-weight: bold;
+  position: relative;
+  top: -30px; }
+  .view-header a:after {
+    content: '\e600';
+    display: inline-block;
+    font-family: 'icomoon';
+    font-size: 30px;
+    position: relative;
+    top: 6px;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+.featured-quote {
+  font-family: "Neuton", sans-serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  margin: 2em 0;
+  text-align: center; }
+  .featured-quote p {
+    color: #574b43;
+    line-height: 1.3;
+    margin-bottom: .5em;
+    margin: 0 auto;
+    max-width: 91%; }
+  .featured-quote .views-field-title {
+    color: #e2ded0;
+    font-size: 2.2rem;
+    font-style: normal; }
+    .featured-quote .views-field-title span:before {
+      content: '—';
+      margin-right: 5px; }
+
+.block--our-story h2 {
+  color: #574b43;
+  font-family: "Montserrat", serif;
+  font-size: 2.2rem;
+  margin: 10px auto;
+  text-transform: uppercase; }
+.block--our-story .field-name-field-call-to-actio a,
+.block--our-story .field-name-field-call-to-action a {
+  font-weight: bold; }
+  .block--our-story .field-name-field-call-to-actio a:after,
+  .block--our-story .field-name-field-call-to-action a:after {
+    content: '\e600';
+    display: inline-block;
+    font-family: 'icomoon';
+    font-size: 30px;
+    position: relative;
+    top: 6px;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
 
 /*# sourceMappingURL=component.css.map */
