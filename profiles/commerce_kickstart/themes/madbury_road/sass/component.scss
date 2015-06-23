@@ -741,3 +741,52 @@ hr.fancy {
     }
   }
 }
+
+.homepage-grid {
+  padding: 15px 30px;
+
+  .col {
+    border-bottom: 1px solid $highlight-3;
+    border-right: 1px solid $highlight-3;
+    height: 350px;
+    padding-bottom: 30px;
+
+    @media (max-width: 1200px) {
+      border: 0;
+      height: auto;
+    }
+
+    &:nth-child(2n) {
+      border-right: 0;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      border-bottom: 0;
+    }
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    color: $highlight-3;
+    font-size: 7rem;
+    position: relative;
+    right: -7px;
+  }
+
+  a {
+    font-family: $sans-serif;
+    text-transform: uppercase;
+
+    &:after {
+      content: '\e600';
+      display: inline-block;
+      font-family: 'icomoon';
+      font-size: 30px;
+      position: relative;
+      top: 6px;
+      -ms-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+  }
+}
