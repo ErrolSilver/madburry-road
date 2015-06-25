@@ -34,28 +34,34 @@ body {
   font-family: $sans-serif;
 }
 
-h1 {
+h1,
+.h1 {
   @extend %fonts;
   font-size: 3.6rem;
 }
-h2 {
+h2,
+.h2 {
   color: $highlight-3;
   font-family: $serif;
   font-size: 3.2rem;
 }
-h3 {
+h3,
+.h3 {
   @extend %fonts;
   font-size: 3rem;
 }
-h4 {
+h4,
+.h4 {
   @extend %fonts;
   font-size: 2.4rem;
 }
-h5 {
+h5,
+.h5 {
   @extend %fonts;
   font-size: 2rem;
 }
-h6 {
+h6,
+.h6 {
   @extend %fonts;
   font-size: 1.8rem;
 }

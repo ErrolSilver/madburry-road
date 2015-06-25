@@ -30,9 +30,13 @@
   <hr class="fancy">
   <div class="col-md-12">
     <div class="row">
-      <?php print render($content['product:field_product_details']); ?>
-      <hr>
-      <?php print render($content['product:field_specifications']); ?>
+      <div class="constrainer text-center">
+        <?php print render($content['product:field_product_details']); ?>
+      </div>
+      <hr class="fancy">
+      <div class="constrainer text-center">
+        <?php print render($content['product:field_specifications']); ?>
+      </div>
     </div>
   </div>
 </article>
