@@ -921,11 +921,13 @@ hr.fancy {
     border: 2px solid #254a7a;
     bottom: 0px;
     color: #fff;
+    font-family: $sans-serif;
     left: 0;
     margin-left: 15px;
     margin-right: 15px;
     padding: 15px;
     position: absolute;
+    text-transform: uppercase;
     width: 95%;
   }
 }
@@ -937,6 +939,65 @@ hr.fancy {
   margin-left: -15px;
   margin-right: -15px;
   padding: 20px;
+
+  h3 {
+    font-family: $serif;
+    font-size: 2.4rem;
+    margin-bottom: 1em;
+    margin-top: 0;
+  }
+
+  input {
+    height: 45px;
+    width: 100%;
+
+    @media (min-width: 992px) {
+      max-width: 100px;
+    }
+  }
+
+  button {
+    background: $highlight-3;
+    border-radius: 3px;
+    border: 0;
+    color: #fff;
+    font-family: $serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+
+  &--subtext {
+    margin-top: 1em;
+
+    sub {
+      display: block;
+      line-height: 1.5;
+    }
+  }
+
+  ::-webkit-input-placeholder {
+     font-family: $serif;
+     padding-left: 10px;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+     padding-left: 10px;
+     font-family: $serif;  
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     font-family: $serif;  
+     padding-left: 10px;
+  }
+
+  :-ms-input-placeholder {  
+     padding-left: 10px;
+     font-family: $serif;  
+  } 
 }
 
 .pull-up--shipping {

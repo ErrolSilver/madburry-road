@@ -26,7 +26,7 @@
     <div class="col-md-offset-7 col-md-5 pull-up--shipping">
       <div class="shipping-calculator">
         <h3>Calculate Shipping</h3>
-        <input type="text">
+        <input type="text" placeholder="Zip Code">
         <button>Submit</button>
         
         <div class="shipping-calculator--subtext">
