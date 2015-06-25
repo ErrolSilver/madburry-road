@@ -11,19 +11,28 @@
   <footer class="submitted"><?php print $date; ?> -- <?php print $name; ?></footer>
   <?php endif; ?>
   <div<?php print $content_attributes; ?>>
-    <div class="col-md-7">
+    <div class="product--images col-md-7">
       <?php print render($content['product:field_images']); ?>
       <?php print render($content['product:field_materials']); ?>
 
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5 product--description">
       <?php print render($content['title_field']); ?>
       <?php print render($content['body']); ?>
       <?php print render($content['field_product']); ?>
       <?php print render($content['product:commerce_price']); ?>
+    </div>
 
+    <div class="col-md-offset-7 col-md-5 pull-up--shipping">
       <div class="shipping-calculator">
-        filler filler filler
+        <h3>Calculate Shipping</h3>
+        <input type="text">
+        <button>Submit</button>
+        
+        <div class="shipping-calculator--subtext">
+          <sub>FREE shipping in select areas with Try Us at Home</sub>
+          <sub>$250 flat-rate shipping in all other areas</sub>
+        </div>
       </div>
     </div>
   </div>
@@ -33,7 +42,7 @@
       <div class="constrainer text-center">
         <?php print render($content['product:field_product_details']); ?>
       </div>
-      <hr class="fancy">
+      <hr>
       <div class="constrainer text-center">
         <?php print render($content['product:field_specifications']); ?>
       </div>

@@ -772,4 +772,81 @@ hr.fancy {
     font-weight: normal;
     margin-bottom: 1em; }
 
+.product--images .cloud-zoom-gallery-thumbs {
+  border-bottom: 1px solid #b5ae99;
+  padding: 1.5em 0;
+  text-align: center;
+  width: 100%; }
+  .product--images .cloud-zoom-gallery-thumbs a {
+    border-radius: 50%;
+    border: 2px solid #2e4878;
+    display: inline-block;
+    height: 17px;
+    width: 17px; }
+    .product--images .cloud-zoom-gallery-thumbs a.active {
+      background: #2e4878; }
+    .product--images .cloud-zoom-gallery-thumbs a img {
+      display: none; }
+.product--images .cloud-zoom-container {
+  width: 100%; }
+  .product--images .cloud-zoom-container div[style] {
+    width: 100% !important; }
+    .product--images .cloud-zoom-container div[style] img {
+      width: 100%; }
+.product--images .field-name-field-materials .field-label {
+  display: none; }
+.product--images .field-name-field-materials .field-item {
+  border: 1px solid #b5ae99;
+  float: left;
+  height: 100px;
+  margin-right: 20px;
+  margin-top: 1.5em;
+  width: 100px; }
+  .product--images .field-name-field-materials .field-item img {
+    height: 100%;
+    width: 100%; }
+
+.product--description {
+  padding-bottom: 60px; }
+  .product--description .field-name-title-field {
+    color: #4d5963;
+    font-family: "Montserrat", serif;
+    font-size: 3.6rem;
+    margin-top: 0;
+    text-transform: uppercase; }
+  .product--description .form-item-quantity {
+    float: left; }
+  .product--description .ui-spinner {
+    display: none; }
+  .product--description .commerce-product-field-commerce-price {
+    color: #d55d3a;
+    float: right;
+    font-family: "Neuton", sans-serif;
+    font-size: 4rem;
+    font-weight: bold; }
+  .product--description button {
+    background: #85a739;
+    border-radius: 5px;
+    border: 2px solid #254a7a;
+    bottom: 0px;
+    color: #fff;
+    left: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px;
+    position: absolute;
+    width: 95%; }
+
+.shipping-calculator {
+  border-radius: 3px;
+  border: 1px solid #b5ae99;
+  height: 225px;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 20px; }
+
+@media (min-width: 1200px) {
+  .pull-up--shipping {
+    margin-top: -130px; } }
+
 /*# sourceMappingURL=component.css.map */
