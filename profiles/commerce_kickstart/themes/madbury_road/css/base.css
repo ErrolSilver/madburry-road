@@ -256,4 +256,10 @@ p,
 .field {
   line-height: 1.8; }
 
+.icon-residential {
+  font-size: 8rem; }
+
+.icon-office {
+  margin-bottom: .6em; }
+
 /*# sourceMappingURL=base.css.map */
