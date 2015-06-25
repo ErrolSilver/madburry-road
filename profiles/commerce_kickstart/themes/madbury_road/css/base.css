@@ -257,9 +257,11 @@ p,
   line-height: 1.8; }
 
 .icon-residential {
-  font-size: 8rem; }
+  font-size: 7em !important; }
 
 .icon-office {
-  margin-bottom: .6em; }
+  font-size: 4em !important;
+  margin-bottom: 0.4em !important;
+  margin-top: 0.35em !important; }
 
 /*# sourceMappingURL=base.css.map */

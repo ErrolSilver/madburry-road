@@ -34,6 +34,10 @@
   var $headLinks = $('.navigation--primary').find('.nolink');
 
   $headLinks.click(function(event) {
+    if(!$(this).next('ul').hasClass('open-nav')) {
+      $headLinks.not($(this)).next('ul').removeClass('open-nav');
+      $('.primary--header').removeClass('open-nav');
+    }
     $(this).next('ul').toggleClass('open-nav');
     $('.primary--header').toggleClass('open-nav');
   });
