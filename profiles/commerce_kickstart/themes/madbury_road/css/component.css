@@ -893,15 +893,8 @@ hr.fancy {
     padding-left: 10px;
     font-family: "Neuton", sans-serif; }
 
-@media (min-width: 1200px) {
-  .pull-up--shipping {
-    margin-top: -130px; } }
-
-.field-field-materials {
-  display: block;
-  float: left;
-  min-height: 250px;
-  width: 100%; }
+.pull-up--shipping {
+  margin-top: 1em; }
 
 span[style] {
   font-size: initial !important; }

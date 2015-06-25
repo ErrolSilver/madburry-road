@@ -1005,17 +1005,11 @@ hr.fancy {
 }
 
 .pull-up--shipping {
+  margin-top: 1em;
 
   @media (min-width: 1200px) {
-    margin-top: -130px;
+   // margin-top: -130px;
   }
-}
-
-.field-field-materials {
-  display: block;
-  float: left;
-  min-height: 250px;
-  width: 100%;
 }
 
 span[style] {
