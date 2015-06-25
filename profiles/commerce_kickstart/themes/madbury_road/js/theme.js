@@ -59,6 +59,8 @@
     e.preventDefault();
   });
 
+  $('.cloud-zoom-gallery-thumbs').find('a').first().addClass('active');
+
   $(window).scroll(function(e) {
      var scrolled = $(window).scrollTop();
 

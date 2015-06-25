@@ -897,4 +897,13 @@ hr.fancy {
   .pull-up--shipping {
     margin-top: -130px; } }
 
+.field-field-materials {
+  display: block;
+  float: left;
+  min-height: 250px;
+  width: 100%; }
+
+span[style] {
+  font-size: initial !important; }
+
 /*# sourceMappingURL=component.css.map */
