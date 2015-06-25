@@ -42,6 +42,23 @@
     $('.primary--header').toggleClass('open-nav');
   });
 
+  $('#shippingBtn').click(function(e) { 
+    var zipsTotal = $('#block-views-zip-codes-block').find('p').text();
+    var zipsInput = $('.shipping-calculator').find('input').val();
+    var zipsArray = zipsTotal.split(',');
+
+    zipsArray.every(function(val) {
+      if (val === zipsInput) {
+        alert('FREE SHIPPING');
+        return false;
+      } else {
+        alert('$250 DOLLAR SHIPPING');
+        return false;
+      }
+    });
+    e.preventDefault();
+  });
+
   $(window).scroll(function(e) {
      var scrolled = $(window).scrollTop();
 

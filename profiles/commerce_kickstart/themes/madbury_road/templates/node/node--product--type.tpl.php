@@ -27,7 +27,7 @@
       <div class="shipping-calculator">
         <h3>Calculate Shipping</h3>
         <input type="text" placeholder="Zip Code">
-        <button>Submit</button>
+        <button id="shippingBtn">Submit</button>
         
         <div class="shipping-calculator--subtext">
           <sub>FREE shipping in select areas with Try Us at Home</sub>
