@@ -84,6 +84,8 @@
 
   <div id="primaryHeader" class="primary--header">
     <div class="container text-center">
+      <a href="#" class="js--mobile-show burger"></a>
+      <a href="#" class="js--mobile-show burger__cart"></a>
       <div class="logo">
         <?php print l($svg_logo, '<front>', array('html' => TRUE)); ?>
       </div> <!-- /logo -->

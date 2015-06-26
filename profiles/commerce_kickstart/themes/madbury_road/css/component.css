@@ -221,6 +221,10 @@ header .container {
   @media (max-width: 992px) {
     .logo {
       position: static; } }
+  @media (max-width: 410px) {
+    .logo {
+      padding-top: 1em;
+      width: 200px; } }
 
 .primary--navigation {
   overflow: hidden;
@@ -898,5 +902,45 @@ hr.fancy {
 
 span[style] {
   font-size: initial !important; }
+
+.burger {
+  display: none; }
+  .burger:after {
+    content: '\e609';
+    font-family: 'icomoon';
+    font-size: 90px;
+    left: -26px;
+    position: absolute;
+    top: -45px; }
+  @media (max-width: 992px) {
+    .burger {
+      border: 1px solid #000;
+      border-radius: 5px;
+      display: block;
+      height: 40px;
+      left: 15px;
+      position: absolute;
+      top: 29px;
+      width: 40px; } }
+
+.burger__cart {
+  display: none; }
+  .burger__cart:after {
+    content: '\e604';
+    font-family: 'icomoon';
+    font-size: 120px;
+    left: -41px;
+    position: absolute;
+    top: -65px; }
+  @media (max-width: 992px) {
+    .burger__cart {
+      border: 1px solid #000;
+      border-radius: 5px;
+      display: block;
+      height: 40px;
+      position: absolute;
+      right: 15px;
+      top: 29px;
+      width: 40px; } }
 
 /*# sourceMappingURL=component.css.map */
