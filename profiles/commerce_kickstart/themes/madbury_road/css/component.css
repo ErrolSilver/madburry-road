@@ -276,7 +276,7 @@ header .container {
 
 .navigation--primary {
   padding-top: 30px;
-  position: relative; }
+  position: static; }
   .navigation--primary .nav li {
     display: inline-block;
     position: static;
@@ -942,5 +942,25 @@ span[style] {
       right: 15px;
       top: 29px;
       width: 40px; } }
+
+.mobile-open {
+  height: auto; }
+  .mobile-open .primary--navigation * {
+    height: auto !important;
+    opacity: 1 !important;
+    position: static !important;
+    width: 100% !important; }
+  .mobile-open .primary--navigation ul {
+    width: 100%;
+    visibility: hidden; }
+    .mobile-open .primary--navigation ul .nolink {
+      display: none !important; }
+    .mobile-open .primary--navigation ul ul {
+      display: block;
+      visibility: visible; }
+    .mobile-open .primary--navigation ul li {
+      border-bottom: 1px solid #b5ae99;
+      display: inline-block !important;
+      width: 100%; }
 
 /*# sourceMappingURL=component.css.map */

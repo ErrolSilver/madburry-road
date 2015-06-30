@@ -59,18 +59,26 @@
     e.preventDefault();
   });
 
+  $('.js--mobile-show').click(function(e) {
+    $('.primary--header').find('ul').toggleClass('open-nav');
+    $('.primary--header').toggleClass('mobile-open');
+    e.preventDefault();
+  });
+
   $('.cloud-zoom-gallery-thumbs').find('a').first().addClass('active');
 
   $(window).scroll(function(e) {
-     var scrolled = $(window).scrollTop();
+    var scrolled = $(window).scrollTop();
 
-     if(headerOffset <= scrolled) {
-      $('#primaryHeader').addClass('header--affix');
-      $('.top-bar').addClass('padding-bottom');
-     } else {
-      $('#primaryHeader').removeClass('header--affix');
-      $('.top-bar').removeClass('padding-bottom');
-     }
+    if ($(window).width() > 992) {
+      if(headerOffset <= scrolled) {
+       $('#primaryHeader').addClass('header--affix');
+       $('.top-bar').addClass('padding-bottom');
+      } else {
+       $('#primaryHeader').removeClass('header--affix');
+       $('.top-bar').removeClass('padding-bottom');
+      }
+    }
 
      moveSlide($('.jumbotron__banner'), 0.2, 1)
   });

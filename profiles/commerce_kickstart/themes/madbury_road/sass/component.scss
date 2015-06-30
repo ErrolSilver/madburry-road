@@ -130,7 +130,7 @@ header {
 
 .navigation--primary {
   padding-top: 30px;
-  position: relative;
+  position: static;
 
   .nav {
 
@@ -1066,5 +1066,39 @@ span[style] {
     right: 15px;
     top: 29px;
     width: 40px;
+  }
+}
+
+.mobile-open {
+  height: auto;
+
+  .primary--navigation {
+
+    * {
+      height: auto!important;
+      opacity: 1!important;
+      position: static!important;
+      width: 100%!important;
+    }
+
+    ul {
+      width: 100%;
+      visibility: hidden;
+
+      .nolink {
+        display: none!important; 
+      }
+
+      ul {
+        display: block;
+        visibility: visible;
+      }
+
+      li {
+        border-bottom: 1px solid $highlight-3;
+        display: inline-block!important;
+        width: 100%;
+      }
+    }
   }
 }
