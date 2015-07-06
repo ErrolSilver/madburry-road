@@ -83,6 +83,32 @@
      moveSlide($('.jumbotron__banner'), 0.2, 1)
   });
 
+  if ($('.page-checkout-3').length > 0) {
+    $('.checkout-continue').click(function(event) {
+      /* Act on the event */
+
+      var zipsTotal = $('#block-views-zip-codes-block').find('p').text();
+      var zipsInput = $('.postal-code').val();
+      var zipsArray = zipsTotal.split(',');
+      var $couponField = $('.form-item-commerce-coupon-coupon-code').find('input');
+
+      zipsArray.every(function(val) {
+        if (val === zipsInput) {
+          $couponField.val('Q5zvS+nPJ~x+T*Pa');
+          return false;
+        } else {
+          $couponField.val('standard');
+          return false;
+        }
+      });
+
+      setTimeout(function () {
+        $('#commerce-checkout-form-checkout').submit();
+      },500);
+      event.preventDefault();
+    });
+  }
+
 
   function moveSlide(element, xspeed, zindex) {
     var scrolled = $(window).scrollTop(),

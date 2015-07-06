@@ -499,6 +499,34 @@ header {
     float: right;
     margin: 0;
     padding-right: 5px;
+    position: relative;
+
+    a {
+      color: $highlight-4;
+    }
+  }
+
+  .line-item-quantity-label {
+    display: none;
+  }
+
+  .line-item-quantity {
+    padding: 9px 30px;
+
+    &:before {
+      content: '\e604';
+      color: $highlight-3;
+      font-family: 'icomoon';
+      font-size: 100px;
+      left: -40px;
+      position: absolute;
+      top: -51px;
+    }
+  }
+
+  .list-inline {
+    clear: none;
+    float: right;
 
     a {
       background: #b5ae99;
@@ -1099,6 +1127,14 @@ span[style] {
         display: inline-block!important;
         width: 100%;
       }
+    }
+  }
+}
+
+.page-cart {
+  .entity-commerce-product {
+    img {
+      max-width: 230px;
     }
   }
 }
