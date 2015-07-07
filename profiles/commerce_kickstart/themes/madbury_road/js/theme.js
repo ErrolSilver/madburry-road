@@ -80,10 +80,13 @@
       }
     }
 
-     moveSlide($('.jumbotron__banner'), 0.2, 1)
+    if($('.jumbotron__banner').length > 0) {
+       moveSlide($('.jumbotron__banner'), 0.2, 1)
+    }
   });
 
-  if ($('.page-checkout-3').length > 0) {
+  if ($('.page-checkout').length > 0) {
+
     $('.checkout-continue').click(function(event) {
       /* Act on the event */
 
@@ -96,17 +99,40 @@
         if (val === zipsInput) {
           $couponField.val('Q5zvS+nPJ~x+T*Pa');
           return false;
+          ;
         } else {
           $couponField.val('standard');
           return false;
         }
       });
 
+
       setTimeout(function () {
         $('#commerce-checkout-form-checkout').submit();
       },500);
       event.preventDefault();
     });
+  }
+
+  if ($('.additional-item').length > 0) {
+    var itemFamilyHeader = $('.product--description .field-name-title-field').first().text().trim().toLowerCase();
+    var itemFamily = itemFamilyHeader.substr(0, itemFamilyHeader.indexOf(" "));
+
+    $('.additional-item .views-row a').each(function(index, el) {
+      var $elem = $(this);
+      var additionalItem = $(this).text();
+
+
+      if (additionalItem.toLowerCase().indexOf(itemFamily.toLowerCase()) >= 0) {
+      } else {
+        $elem.closest('.views-row').remove();
+      }
+    });
+
+
+    setTimeout(function () {
+      $('.additional-item').find('input[type="text"]').val('0');
+    }, 250);
   }
 
 

@@ -1,3 +1,7 @@
+<?php
+$product_description = block_get_blocks_by_region('product_description');
+?>
+
 <article<?php print $attributes; ?>>
   <?php print $user_picture; ?>
   <?php print render($title_prefix); ?>
@@ -19,6 +23,7 @@
     <div class="col-md-5 product--description">
       <?php print render($content['title_field']); ?>
       <?php print render($content['body']); ?>
+      <?php print render($product_description); ?>
       <?php print render($content['field_product']); ?>
       <?php print render($content['product:commerce_price']); ?>
     </div>

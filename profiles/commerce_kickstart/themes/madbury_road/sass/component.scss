@@ -973,8 +973,7 @@ hr.fancy {
   border-radius: 3px;
   border: 1px solid $highlight-3;
   height: 225px;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-right: -7px;
   padding: 20px;
 
   h3 {
@@ -1137,4 +1136,36 @@ span[style] {
       max-width: 230px;
     }
   }
+}
+
+.additional-item {
+  .views-row {
+    clear: both;
+    display: block;
+    position: relative;
+    width: 100%;
+
+    label {
+      display: none;
+    }
+
+    input {
+      min-width: 35px;
+    }
+
+    button {
+      display: none;
+      position: static;
+    }
+  }
+
+  .views-field-title {
+    float: right;
+    width: 85%;
+  }
+}
+
+
+.add-cart-message-wrapper {
+  top: 39vh;
 }

@@ -869,8 +869,7 @@ hr.fancy {
   border-radius: 3px;
   border: 1px solid #b5ae99;
   height: 225px;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-right: -7px;
   padding: 20px; }
   .shipping-calculator h3 {
     font-family: "Neuton", sans-serif;
@@ -983,5 +982,24 @@ span[style] {
 
 .page-cart .entity-commerce-product img {
   max-width: 230px; }
+
+.additional-item .views-row {
+  clear: both;
+  display: block;
+  position: relative;
+  width: 100%; }
+  .additional-item .views-row label {
+    display: none; }
+  .additional-item .views-row input {
+    min-width: 35px; }
+  .additional-item .views-row button {
+    display: none;
+    position: static; }
+.additional-item .views-field-title {
+  float: right;
+  width: 85%; }
+
+.add-cart-message-wrapper {
+  top: 39vh; }
 
 /*# sourceMappingURL=component.css.map */
