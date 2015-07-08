@@ -184,14 +184,19 @@
 .icon-share2:before {
   content: "\ea82"; }
 
-.btn--default, .form--contact button {
+.btn--default, .form--contact button, .page-cart .btn-default {
   background: #85a739;
   border-radius: 5px;
   border: 2px solid #254a7a;
-  font-family: "Montserrat", serif;
-  text-transform: uppercase;
   color: #fff;
-  padding: 20px 30px; }
+  font-family: "Montserrat", serif;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  -webkit-transition: background ease-in-out .3s;
+  transition: background ease-in-out .3s; }
+  .btn--default:hover, .form--contact button:hover, .page-cart .btn-default:hover {
+    background: #75982e;
+    color: #fff; }
 
 header .top-bar {
   background: #e2ded0;
@@ -243,7 +248,7 @@ header .container {
   width: 100%;
   -webkit-transition: border-bottom ease-in-out .3s, height ease-in-out .3s;
   transition: border-bottom ease-in-out .3s, height ease-in-out .3s;
-  z-index: 10; }
+  z-index: 999; }
   @media (max-width: 992px) {
     .primary--header {
       height: 100px;
@@ -256,23 +261,27 @@ header .container {
 .breadcrumb {
   border-top: 1px solid #b5ae99;
   border-bottom: 1px solid #b5ae99;
-  margin: 0 15px;
+  margin: 15px 0;
+  padding: 15px 10px;
   background: none;
   text-align: left; }
 
 .header--affix {
   background: #fff;
-  border-bottom: 2px solid #e2ded0;
+  border-bottom: 1px solid #e2ded0;
+  height: 100px;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 500; }
   .header--affix .primary--navigation {
     padding: 0; }
+  .header--affix .navigation--primary {
+    padding-top: 20px; }
   .header--affix .logo {
     width: 220px;
-    top: 15px; }
+    top: 8px; }
 
 .navigation--primary {
   padding-top: 30px;
@@ -398,10 +407,18 @@ header .container {
         .jumbotron__banner .content .field-name-field-call-to-actio a,
         .jumbotron__banner .content .field-name-field-call-to-action a {
           background: #85a739;
-          color: #fff;
           border-radius: 5px;
           border: 2px solid #254a7a;
-          padding: 20px 30px; }
+          color: #fff;
+          font-family: "Montserrat", serif;
+          padding: 20px 30px;
+          text-transform: uppercase;
+          text-decoration: none;
+          -webkit-transition: background ease-in-out .3s;
+          transition: background ease-in-out .3s; }
+          .jumbotron__banner .content .field-name-field-call-to-actio a:hover,
+          .jumbotron__banner .content .field-name-field-call-to-action a:hover {
+            background: #75982e; }
         @media (max-width: 992px) {
           .jumbotron__banner .content .field-name-field-call-to-actio,
           .jumbotron__banner .content .field-name-field-call-to-action {
@@ -434,10 +451,15 @@ header .container {
   .footer .nav {
     font-family: "Neuton", sans-serif;
     font-size: 1.6rem; }
+    .footer .nav li {
+      font-size: 16px; }
+      .footer .nav li a:hover {
+        background: none;
+        text-decoration: underline; }
     .footer .nav li:first-child {
       color: #574b43;
       font-family: "Montserrat", serif;
-      font-size: 1.6rem; }
+      font-size: 18px; }
       .footer .nav li:first-child a {
         color: inherit; }
   .footer .region-footer {
@@ -460,7 +482,10 @@ header .container {
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    width: 60px; }
+    opacity: 1;
+    width: 60px;
+    -webkit-transition: opacity ease-in-out .3s;
+    transition: opacity ease-in-out .3s; }
     .social-media-share .menu li a {
       color: inherit;
       cursor: pointer;
@@ -562,7 +587,14 @@ header .container {
       background: #b5ae99;
       border-radius: 5px;
       color: #fff;
-      padding: 5px 10px; }
+      font-family: "Montserrat", serif;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      text-decoration: none;
+      -webkit-transition: background ease-in-out .3s;
+      transition: background ease-in-out .3s; }
+      .view-shopping-cart .list-inline a:hover {
+        background: #a8a08a; }
 
 .top-bar .block-views {
   float: right;
@@ -612,6 +644,8 @@ header .container {
       max-width: 100%; }
     .panel-default img {
       width: 100%; } }
+  .panel-default:hover .panel-footer {
+    background: rgba(46, 72, 120, 0.4); }
   .panel-default .panel-body {
     padding: 0; }
   .panel-default .panel-footer {
@@ -622,7 +656,9 @@ header .container {
     font-family: "Montserrat", serif;
     padding: 0;
     position: absolute;
-    width: 94.8%; }
+    width: 94.8%;
+    -webkit-transition: background ease-in-out .3s;
+    transition: background ease-in-out .3s; }
     .panel-default .panel-footer h2 {
       color: inherit;
       font-family: inherit;
@@ -633,7 +669,8 @@ header .container {
         color: inherit;
         display: block;
         padding: 4% 0;
-        width: 100%; }
+        width: 100%;
+        text-decoration: none; }
     @media (max-width: 1200px) {
       .panel-default .panel-footer {
         width: 94%; } }
@@ -808,7 +845,10 @@ hr.fancy {
     border: 2px solid #2e4878;
     display: inline-block;
     height: 17px;
+    margin-right: 10px;
     width: 17px; }
+    .product--images .cloud-zoom-gallery-thumbs a:last-child {
+      margin-right: 0; }
     .product--images .cloud-zoom-gallery-thumbs a.active {
       background: #2e4878; }
     .product--images .cloud-zoom-gallery-thumbs a img {
@@ -868,7 +908,7 @@ hr.fancy {
 .shipping-calculator {
   border-radius: 3px;
   border: 1px solid #b5ae99;
-  height: 225px;
+  height: 200px;
   margin-right: -7px;
   padding: 20px; }
   .shipping-calculator h3 {
@@ -981,7 +1021,7 @@ span[style] {
       width: 100%; }
 
 .page-cart .entity-commerce-product img {
-  max-width: 230px; }
+  max-width: 300px; }
 
 .additional-item .views-row {
   clear: both;
@@ -1001,5 +1041,12 @@ span[style] {
 
 .add-cart-message-wrapper {
   top: 39vh; }
+
+.all-products {
+  list-style-type: none;
+  padding: 0; }
+
+.active-trail.active-trail.active-trail.active-trail {
+  color: #0091cf; }
 
 /*# sourceMappingURL=component.css.map */

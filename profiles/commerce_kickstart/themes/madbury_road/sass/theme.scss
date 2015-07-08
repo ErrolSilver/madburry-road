@@ -7,3 +7,11 @@
 
 @import "vars";
 @import "mixins";
+
+
+.node-type-location {
+  .links.list-inline,
+  .submitted {
+    display: none;
+  }
+}

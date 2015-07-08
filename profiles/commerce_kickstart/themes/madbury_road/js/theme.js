@@ -135,6 +135,24 @@
     }, 250);
   }
 
+  $('.node-type-product-display button').click(function(e) {
+    var $additionalItemRows = $('.additional-item .views-row');
+
+    console.log($additionalItemRows.length);
+
+    if  ($additionalItemRows.length <= 0) {
+      setTimeout(function() {
+        window.location.href = 'cart';
+      }, 500);
+    }
+  });
+
+  if ($('.cloud-zoom-gallery-thumbs').length > 0) {
+    if ($('.cloud-zoom-gallery-thumbs a').length <= 1) {
+      $('.cloud-zoom-gallery-thumbs').addClass('hidden');
+    }
+  }
+
 
   function moveSlide(element, xspeed, zindex) {
     var scrolled = $(window).scrollTop(),

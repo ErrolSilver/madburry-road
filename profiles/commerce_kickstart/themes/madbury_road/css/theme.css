@@ -185,4 +185,8 @@
 .icon-share2:before {
   content: "\ea82"; }
 
+.node-type-location .links.list-inline,
+.node-type-location .submitted {
+  display: none; }
+
 /*# sourceMappingURL=theme.css.map */
