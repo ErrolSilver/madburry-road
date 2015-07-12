@@ -103,6 +103,15 @@
   <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
 <?php endif; ?>
 
+<?php if (!empty($breadcrumb)): ?>
+  <div class="breadcrumb--container">
+    <div class="container">
+      <?php print $breadcrumb; ?>
+    </div>
+  </div>
+<?php endif; ?>
+
+
 <div class="main-container container">
 
   <div class="row">
@@ -114,7 +123,6 @@
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>

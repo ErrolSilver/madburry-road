@@ -23,9 +23,10 @@
   /**
    * Stuff to run on page load and ajax events.
    */
-  Drupal.behaviors.bootstrapStarter = {
+  Drupal.behaviors.madburyRoad = {
     attach: function (context, settings) {
       svgToPng();
+      breadcrumbify();
       // Place functions to run here.
     }
   };
@@ -106,7 +107,7 @@
         }
       });
 
-
+   // this doesnt work   
       setTimeout(function () {
         $('#commerce-checkout-form-checkout').submit();
       },500);
@@ -135,6 +136,7 @@
     }, 250);
   }
 
+// this doesnt work
   $('.node-type-product-display button').click(function(e) {
     var $additionalItemRows = $('.additional-item .views-row');
 
@@ -175,6 +177,24 @@
         transform: 'translateY(0px) translateX(0px)',
       });
     }
+  }
+
+
+
+  function breadcrumbify() {
+    var path = "";
+    var href = document.location.href;
+    var s = href.split("/");
+    s[2] = 'Home';
+
+    for (var i=2;i<(s.length-1);i++) {
+    path+="<A HREF=\""+href.substring(0,href.indexOf("/"+s[i])+s[i].length+1)+"/\">"+s[i]+"</A>";
+    }
+    i=s.length-1;
+    path+="<A HREF=\""+href.substring(0,href.indexOf(s[i])+s[i].length)+"\">"+s[i]+"</A>";
+
+    $('.breadcrumb').html(path);
+    $('.breadcrumb').find('a').first().attr('href', '/');
   }
 
 }(jQuery));
