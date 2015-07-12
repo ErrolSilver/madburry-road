@@ -12,6 +12,21 @@
   src: url("fonts/icomoon/icomoon.eot?#iefix-ltpp1z") format("embedded-opentype"), url("fonts/icomoon/icomoon.woff?-ltpp1z") format("woff"), url("fonts/icomoon/icomoon.ttf?-ltpp1z") format("truetype"), url("fonts/icomoon/icomoon.svg?-ltpp1z#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+.icon-noun_26207_cc:before {
+  content: "\e60c"; }
+
+.icon-noun-27277-cc:before {
+  content: "\e60d"; }
+
+.icon-noun-34458-cc:before {
+  content: "\e60e"; }
+
+.icon-noun-35035-cc:before {
+  content: "\e60f"; }
+
+.icon-noun-43760-cc:before {
+  content: "\e610"; }
+
 /**
  * Columns
  */
