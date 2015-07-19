@@ -593,6 +593,9 @@ header .container {
 .view-shopping-cart {
   float: right;
   font-size: 90%; }
+  @media (max-width: 992px) {
+    .view-shopping-cart {
+      display: none; } }
   .view-shopping-cart p {
     float: left;
     left: -15px;
@@ -659,6 +662,11 @@ header .container {
   overflow: hidden;
   position: relative;
   top: 0.2rem; }
+  @media (max-width: 992px) {
+    .top-nav--utility {
+      left: auto;
+      text-align: center;
+      width: 100%; } }
   .top-nav--utility .nav li {
     display: inline-block; }
     .top-nav--utility .nav li a {
@@ -667,6 +675,17 @@ header .container {
       padding: 0; }
       .top-nav--utility .nav li a:hover, .top-nav--utility .nav li a:focus, .top-nav--utility .nav li a:active {
         background: 0; }
+      @media (max-width: 992px) {
+        .top-nav--utility .nav li a {
+          display: none; } }
+    @media (max-width: 992px) {
+      .top-nav--utility .nav li a[href*='tel'] {
+        font-size: 25px;
+        display: block; }
+        .top-nav--utility .nav li a[href*='tel'] span {
+          top: -18px; }
+          .top-nav--utility .nav li a[href*='tel'] span:before {
+            font-size: 75px; } }
     .top-nav--utility .nav li span {
       color: #b5ae99;
       cursor: pointer;
@@ -1102,5 +1121,8 @@ span[style] {
 
 .active-trail.active-trail.active-trail.active-trail {
   color: #0091cf; }
+
+.front .active-trail.active-trail.active-trail.active-trail {
+  color: initial; }
 
 /*# sourceMappingURL=component.css.map */

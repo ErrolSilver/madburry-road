@@ -561,6 +561,10 @@ header {
   float: right;
   font-size: 90%;
 
+  @media (max-width: 992px) {
+    display: none;
+  }
+
   p {
     float: left;
     left: -15px;
@@ -658,6 +662,12 @@ header {
   position: relative;
   top: 0.2rem;
 
+  @media (max-width: 992px) {
+    left: auto;
+    text-align: center;
+    width: 100%;
+  }
+
   .nav {
     li {
       display: inline-block;
@@ -671,6 +681,25 @@ header {
         &:focus,
         &:active {
           background: 0;
+        }
+
+        @media (max-width: 992px) {
+          display: none;
+        }
+      }
+
+      a[href*='tel'] {
+        @media (max-width: 992px) {
+          font-size: 25px;
+          display: block;
+
+          span {
+            top: -18px;
+            
+            &:before {
+              font-size: 75px;
+            }
+          }
         }
       }
 
@@ -1304,4 +1333,10 @@ span[style] {
 
 .active-trail.active-trail.active-trail.active-trail {
   color: $highlight-7;
+}
+
+.front {
+  .active-trail.active-trail.active-trail.active-trail {
+    color: initial;
+  }
 }
