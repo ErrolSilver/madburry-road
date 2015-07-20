@@ -467,6 +467,9 @@ header {
       overflow: hidden;
       padding: 0;
       visibility: hidden;
+      opacity: 1;
+      -webkit-transition: .3s ease-in-out opacity;
+      transition: .3s ease-in-out opacity;
 
       span {
         cursor: pointer;
@@ -750,6 +753,15 @@ header {
     .panel-footer {
       background: rgba(46, 72, 120, .4);
     }
+  }
+  
+  .panel-heading {
+    background: $base;
+    color: #fff;
+    font-family: $serif;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-transform: uppercase;
   }
 
   .panel-body {
@@ -1291,7 +1303,39 @@ span[style] {
 
   .btn-default {
     @extend .btn--default;
+    display: block;
+    float: none;
+    max-width: 300px;
+    width: 100%;
+    margin: 3em auto 0;
   }
+
+  .btn-info {
+    background: 0;
+    border: 0;
+    text-decoration: underline;
+  }
+}
+
+.price {
+  color: $highlight-10; 
+  font-family: $serif-alt;
+  font-weight: bold;
+}
+
+.component-type-commerce-price-formatted-amount {
+  font-size: 2.4rem;
+
+  td {
+    background-color: transparent!important;
+    border: 0!important;
+  }
+}
+
+.component-total {
+  color: $highlight-10; 
+  font-family: $serif-alt;
+  font-weight: bold;
 }
 
 .additional-item {
@@ -1339,4 +1383,24 @@ span[style] {
   .active-trail.active-trail.active-trail.active-trail {
     color: initial;
   }
+}
+
+.cart_contents {
+  font-size: 90%;
+
+  @media (max-width: 1200px) {
+    font-size: 80%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 100%;
+  }
+}
+
+div.addressfield-container-inline > div.form-item {
+  width: 100%;
+}
+
+.commerce_coupon {
+  display: none;
 }

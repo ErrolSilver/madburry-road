@@ -108,6 +108,7 @@
       });
 
    // this doesnt work   
+   // // nevermind this works now, keep your eyes peeled, fam
       setTimeout(function () {
         $('#commerce-checkout-form-checkout').submit();
       },500);

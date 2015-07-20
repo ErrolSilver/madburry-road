@@ -532,7 +532,10 @@ header .container {
       cursor: pointer;
       overflow: hidden;
       padding: 0;
-      visibility: hidden; }
+      visibility: hidden;
+      opacity: 1;
+      -webkit-transition: .3s ease-in-out opacity;
+      transition: .3s ease-in-out opacity; }
       .social-media-share .menu li a span {
         cursor: pointer;
         display: block;
@@ -719,6 +722,13 @@ header .container {
     cursor: pointer; }
     .panel-default:hover .panel-footer {
       background: rgba(46, 72, 120, 0.4); }
+  .panel-default .panel-heading {
+    background: #2e4878;
+    color: #fff;
+    font-family: "Neuton", sans-serif;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-transform: uppercase; }
   .panel-default .panel-body {
     padding: 0; }
   .panel-default .panel-footer {
@@ -1095,6 +1105,32 @@ span[style] {
 
 .page-cart .entity-commerce-product img {
   max-width: 300px; }
+.page-cart .btn-default {
+  display: block;
+  float: none;
+  max-width: 300px;
+  width: 100%;
+  margin: 3em auto 0; }
+.page-cart .btn-info {
+  background: 0;
+  border: 0;
+  text-decoration: underline; }
+
+.price {
+  color: #d55d3a;
+  font-family: "Merriweather", serif;
+  font-weight: bold; }
+
+.component-type-commerce-price-formatted-amount {
+  font-size: 2.4rem; }
+  .component-type-commerce-price-formatted-amount td {
+    background-color: transparent !important;
+    border: 0 !important; }
+
+.component-total {
+  color: #d55d3a;
+  font-family: "Merriweather", serif;
+  font-weight: bold; }
 
 .additional-item .views-row {
   clear: both;
@@ -1124,5 +1160,20 @@ span[style] {
 
 .front .active-trail.active-trail.active-trail.active-trail {
   color: initial; }
+
+.cart_contents {
+  font-size: 90%; }
+  @media (max-width: 1200px) {
+    .cart_contents {
+      font-size: 80%; } }
+  @media (max-width: 768px) {
+    .cart_contents {
+      font-size: 100%; } }
+
+div.addressfield-container-inline > div.form-item {
+  width: 100%; }
+
+.commerce_coupon {
+  display: none; }
 
 /*# sourceMappingURL=component.css.map */

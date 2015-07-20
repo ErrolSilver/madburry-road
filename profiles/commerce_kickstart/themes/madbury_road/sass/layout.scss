@@ -60,3 +60,61 @@
   margin-bottom: 2em;
   margin-top: 2em;
 }
+
+
+// checkout flow
+.customer_profile_shipping {
+  float: left;
+  margin-right: 15px;
+  width: 66%;
+
+  @media (max-width: 992px) {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.customer_profile_billing {
+  float: left;
+  margin-right: 15px;
+  width: 66%;
+
+  @media (max-width: 992px) {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.checkout-buttons {
+  float: left;
+  width: 100%;
+}
+
+.commerce_payment {
+  .form-item-commerce-payment-payment-details-credit-card-number {
+
+    @media (min-width: 992px) {
+      float: left;
+      padding-right: 15px;
+      width: 50%;
+    }
+  }
+
+  .commerce-credit-card-expiration {
+    @media (min-width: 992px) { 
+      float: left;
+      width: 50%;
+
+      label {
+        display: block;
+      }
+
+      select {
+        float: left;
+        width: 44%;
+      }
+    }
+  }
+}
