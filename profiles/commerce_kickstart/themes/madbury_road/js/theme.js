@@ -124,9 +124,12 @@
       var $elem = $(this);
       var additionalItem = $(this).text();
 
-
       if (additionalItem.toLowerCase().indexOf(itemFamily.toLowerCase()) >= 0) {
       } else {
+        $elem.closest('.views-row').remove();
+      }
+
+      if (additionalItem.toLowerCase().indexOf(itemFamilyHeader.toLowerCase()) >= 0) {
         $elem.closest('.views-row').remove();
       }
     });
@@ -137,23 +140,111 @@
     }, 250);
   }
 
-// this doesnt work
-  $('.node-type-product-display button').click(function(e) {
-    var $additionalItemRows = $('.additional-item .views-row');
+$('#edit-submit').mousedown(function(event) {
 
-    console.log($additionalItemRows.length);
+  var $additionalItemRows = $('.additional-item .views-row');
 
-    if  ($additionalItemRows.length <= 0) {
+  $additionalItemRows.each(function(index, el) {
+    var additionalToSubmitNum = $(this).find('input[type="text"]').val();
+
+
+    if (additionalToSubmitNum > 0 && additionalToSubmitNum != undefined) {
       setTimeout(function() {
-        window.location.href = 'cart';
-      }, 500);
+        $(this).closest('form').submit();
+      }, 2000);
+    } else {
+      setTimeout(function() {
+        window.location.href = '/cart';
+      }, 1000);
     }
+
   });
+
+  if  ($additionalItemRows.length <= 0) {
+    setTimeout(function() {
+      window.location.href = '/cart';
+    }, 1000);
+  }
+});
 
   if ($('.cloud-zoom-gallery-thumbs').length > 0) {
     if ($('.cloud-zoom-gallery-thumbs a').length <= 1) {
       $('.cloud-zoom-gallery-thumbs').addClass('hidden');
     }
+  }
+
+  if ($('input[name="quantity"]').length) {
+    var originalValue = Number($('.commerce-product-field-commerce-price .field-item').text().replace(/\D/g,''));
+    $('input[name="quantity"]').keyup(function(event) {
+      /* Act on the event */
+      var currentPrice = Number($('.commerce-product-field-commerce-price .field-item').text().replace(/\D/g,''));
+      var priceAddition = Number($(this).parent('.form-item').prev().prev().text().replace(/\D/g,''));
+
+      if ($(this).val().length == 0) {
+        var priceAdditionTotal = 0;
+      } else  {
+        var priceAdditionTotal = Number((priceAddition * $(this).val()) * 100);
+      }
+
+      if(($(this).is('#edit-quantity'))) {
+        var priceAdditionTotal = 0;
+      }
+
+      var newPrice = originalValue + priceAdditionTotal;
+      var newPriceTotal = '$'+ Number(newPrice) / 100+'.00';
+      $('.commerce-product-field-commerce-price .field-item').text(newPriceTotal);
+      
+    });
+  }
+
+  if ($('.node-try-us-at-home-step').length) {
+    var homeI = 1;
+    $('.node-try-us-at-home-step').first().parent('.views-row').addClass('active');
+
+    $('.node-try-us-at-home-step').each(function(index, el) {
+      $(this).append('<a href="#" class="try-us-at-home-arrow" data-target="'+homeI+'">Next Step</a>');
+      $(this).append('<span class="try-us-number">'+homeI+'</span>');
+      homeI++;
+    });
+
+    $('.views-row-last .node-try-us-at-home-step').append('<a href="#" class="try-us-at-home-arrow__last">Back to Top</a>');
+
+    $('.views-row-1 .try-us-at-home-arrow').click(function(event) {
+      /* Act on the event */
+      event.preventDefault();
+      $('.view-try-us-at-home-block .view-content').animate({
+        scrollTop: $(".views-row-2").position().top + 50,
+      }, 500);
+
+
+
+      $(this).addClass('fadeOut');
+    });
+
+    $('.views-row-2 .try-us-at-home-arrow').click(function(event) {
+      /* Act on the event */
+      event.preventDefault();
+      $('.view-try-us-at-home-block .view-content').animate({
+        scrollTop: $(".views-row-3").offset().top + 50
+      }, 500);
+
+      $(this).addClass('fadeOut');
+      $('.try-us-at-home--footer').append('<a href="#" class="try-us-at-home-arrow__last">Back to Top</a>');
+
+      $('.try-us-at-home-arrow__last').click(function(event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('.try-us-at-home-arrow').removeClass('fadeOut');
+        $('.view-try-us-at-home-block .view-content').animate({
+          scrollTop: $(".views-row-first").position().top,
+        }, 500);
+      });
+    });
+
+
+    $('.view-try-us-at-home-block').prepend('<div class="try-us-at-home--header"></div>');
+    $('.view-try-us-at-home-block').append('<div class="try-us-at-home--footer"></div>');
+
   }
 
 

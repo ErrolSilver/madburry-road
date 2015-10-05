@@ -519,7 +519,7 @@ header {
 
 .view-try-us-at-home-block {
   border: 1px solid $base;
-  height: 66vh;
+  height: 600px;
   margin: 3em 0;
   overflow: hidden;
   position: relative;
@@ -527,10 +527,12 @@ header {
   .view-content {
     height: 100%;
     margin-top: -50px;
+    overflow: hidden;
   }
 
   .node {
     height: 100%;
+    padding: 13% 0 10% 0;
   }
 
   .views-row {
@@ -538,15 +540,35 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+
+    &.collapsed {
+      height: 10%;
+    }
+  }
+
+  .views-row-last {
+    .try-us-at-home-arrow {
+      display: none;
+    }
   }
 
   .field-name-title-field {
-    background: $base-transparent;
-    height: 50px;
-    padding: 10px;
-    position: relative;
+    font-family: $sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+    position: absolute;
     text-align: center;
-    top: 50px;
+    text-transform: uppercase;
+    top: 33%;
+    width: 100%;
+
+    &.slide-up {
+      background: $base-transparent;
+      height: 50px;
+      padding: 10px;
+      text-align: center;
+      top: 50px;
+    }
   }
 
   .field-name-body {
@@ -558,6 +580,24 @@ header {
       margin: auto;
     }
   }
+}
+
+.try-us-at-home--header {
+  background-color: black;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.try-us-at-home--footer {
+  background-color: black;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .view-shopping-cart {
@@ -1403,4 +1443,32 @@ div.addressfield-container-inline > div.form-item {
 
 .commerce_coupon {
   display: none;
+}
+
+.commerce-add-to-cart .form-type-item {
+  display: none;
+}
+
+.try-us-at-home-arrow,
+.try-us-at-home-arrow__last {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 1;
+  -webkit-transition: opacity ease-in-out .4s;
+  transition: opacity ease-in-out .4s;
+
+  &.fadeOut {
+    opacity: 0;
+  }
+}
+
+.try-us-at-home-arrow__last {
+  top: 32px;
+}
+
+.views-row-last .node-try-us-at-home-step {
+  padding-bottom: 50px;
 }

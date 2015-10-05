@@ -109,29 +109,56 @@ function madbury_road_preprocess_field(&$variables) {
 function madbury_road_theme() {
   $items = array();
       
-    $items['user_login'] = array(
-      'render element' => 'form',
-      'path' => drupal_get_path('theme', 'bootstrap_starter') . '/templates',
-      'template' => 'user-login',
-      'preprocess functions' => array(
-         'bootstrap_starter_user_login'
-      ),
+  $items['user_login'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'bootstrap_starter') . '/templates',
+    'template' => 'user-login',
+    'preprocess functions' => array(
+       'bootstrap_starter_user_login'
+    ),
+  );
+  $items['user_register_form'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'bootstrap_starter') . '/templates',
+    'template' => 'user-register',
+    'preprocess functions' => array(
+      'bootstrap_starter_user_register_form'
+    ),
+  );
+  $items['user_pass'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'bootstrap_starter') . '/templates',
+    'template' => 'user-pass',
+    'preprocess functions' => array(
+      'bootstrap_starter_user_pass'
+    ),
+  );
+  return $items;
+}
+
+/**
+ * hook_form_alter
+ */
+function madbury_road_form_alter(&$form, &$form_state, $form_id) {
+  // e.g form id: commerce_cart_add_to_cart_form_u6onPJSgS7pOgw0Tlo7zHy42LTQzbV913taANkYQKTo
+  //if (strpos($form_id, 'commerce_cart_add_to_cart_form_22') !== FALSE){
+    // Adjust add to cart form
+    madbury_road_commerce_add_to_cart_form_alter($form, $form_state);
+  //}
+
+}
+
+/**
+ * Custom function to alter add to cart form
+ */
+function madbury_road_commerce_add_to_cart_form_alter(&$form, &$form_state){
+  // Add read only price field to add to cart form
+  if (isset($form_state['default_product']->commerce_price)){
+    $form['display_price'] = array(
+      '#title' => t('Price'),
+      '#type' => 'item',
+      '#markup' => commerce_currency_amount_to_decimal($form_state['default_product']->commerce_price[LANGUAGE_NONE][0]['amount'], $form_state['default_product']->commerce_price[LANGUAGE_NONE][0]['currency_code']),
     );
-    $items['user_register_form'] = array(
-      'render element' => 'form',
-      'path' => drupal_get_path('theme', 'bootstrap_starter') . '/templates',
-      'template' => 'user-register',
-      'preprocess functions' => array(
-        'bootstrap_starter_user_register_form'
-      ),
-    );
-    $items['user_pass'] = array(
-      'render element' => 'form',
-      'path' => drupal_get_path('theme', 'bootstrap_starter') . '/templates',
-      'template' => 'user-pass',
-      'preprocess functions' => array(
-        'bootstrap_starter_user_pass'
-      ),
-    );
-    return $items;
+  }
+
 }

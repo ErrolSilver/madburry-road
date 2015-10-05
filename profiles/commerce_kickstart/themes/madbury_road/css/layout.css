@@ -278,4 +278,7 @@
       float: left;
       width: 44%; } }
 
+.logged-in .alert {
+  display: none; }
+
 /*# sourceMappingURL=layout.css.map */

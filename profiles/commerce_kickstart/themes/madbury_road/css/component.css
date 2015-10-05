@@ -565,33 +565,63 @@ header .container {
 
 .view-try-us-at-home-block {
   border: 1px solid #2e4878;
-  height: 66vh;
+  height: 600px;
   margin: 3em 0;
   overflow: hidden;
   position: relative; }
   .view-try-us-at-home-block .view-content {
     height: 100%;
-    margin-top: -50px; }
+    margin-top: -50px;
+    overflow: hidden; }
   .view-try-us-at-home-block .node {
-    height: 100%; }
+    height: 100%;
+    padding: 13% 0 10% 0; }
   .view-try-us-at-home-block .views-row {
     height: 100%;
     left: 0;
     top: 0;
     width: 100%; }
+    .view-try-us-at-home-block .views-row.collapsed {
+      height: 10%; }
+  .view-try-us-at-home-block .views-row-last .try-us-at-home-arrow {
+    display: none; }
   .view-try-us-at-home-block .field-name-title-field {
-    background: rgba(46, 72, 120, 0.8);
-    height: 50px;
-    padding: 10px;
-    position: relative;
+    font-family: "Montserrat", serif;
+    font-size: 4rem;
+    font-weight: 100;
+    position: absolute;
     text-align: center;
-    top: 50px; }
+    text-transform: uppercase;
+    top: 33%;
+    width: 100%; }
+    .view-try-us-at-home-block .field-name-title-field.slide-up {
+      background: rgba(46, 72, 120, 0.8);
+      height: 50px;
+      padding: 10px;
+      text-align: center;
+      top: 50px; }
   .view-try-us-at-home-block .field-name-body {
     background: #fff;
     height: 100%;
     display: flex; }
     .view-try-us-at-home-block .field-name-body .field-items {
       margin: auto; }
+
+.try-us-at-home--header {
+  background-color: black;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10; }
+
+.try-us-at-home--footer {
+  background-color: black;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10; }
 
 .view-shopping-cart {
   float: right;
@@ -1175,5 +1205,28 @@ div.addressfield-container-inline > div.form-item {
 
 .commerce_coupon {
   display: none; }
+
+.commerce-add-to-cart .form-type-item {
+  display: none; }
+
+.try-us-at-home-arrow,
+.try-us-at-home-arrow__last {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 1;
+  -webkit-transition: opacity ease-in-out .4s;
+  transition: opacity ease-in-out .4s; }
+  .try-us-at-home-arrow.fadeOut,
+  .try-us-at-home-arrow__last.fadeOut {
+    opacity: 0; }
+
+.try-us-at-home-arrow__last {
+  top: 32px; }
+
+.views-row-last .node-try-us-at-home-step {
+  padding-bottom: 50px; }
 
 /*# sourceMappingURL=component.css.map */
